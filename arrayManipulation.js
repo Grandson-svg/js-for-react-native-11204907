@@ -17,3 +17,21 @@ function processArray(numbers){
        
     });
 }
+
+
+function formatArrayStrings(strings,numbers){
+    if(strings.length !== numbers.length){
+        throw new Error("less string or number!");
+    }
+    return strings.map((string,index)=>{
+            if(numbers[index] % 2 === 0){
+         return  string.toUpperCase();
+
+            }
+
+            else{
+         return   string.toLowerCase();
+            }
+    })
+
+}
